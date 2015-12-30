@@ -21,11 +21,12 @@ After the mark phase (heap traversal), we perform the "sweep", i.e. we iterate t
 To name a few things:
 
    1. Not multi threaded
-   2. Not at all sure if my root set is complete
-   3. Doesn't work for shared libraries.  The gc code must be statically linked.
-   4. Will collect any block of memory that is referenced only by an internal pointer.  Not sure if collectors like the Boehm collector handle this case but I can imagine some C programs getting tricky and keeping pointers to blocks that are a fixed offset into the actual allocated block (which can be inverted for purposes of freeing).
-   5. Each collection touches ALL live memory, which is generally slow, and also interacts poorly with the virtual memory system (basically none of your active heap can be effectively paged to disk!).
-   6. Many other things I'm sure...
+   2. Very Mac OSX (mach) specific.  Other platforms would need different code for tracking down the stack/data segments.
+   3. Not at all sure if my root set is complete
+   4. Doesn't work for shared libraries.  The gc code must be statically linked.
+   5. Will collect any block of memory that is referenced only by an internal pointer.  Not sure if collectors like the Boehm collector handle this case but I can imagine some C programs getting tricky and keeping pointers to blocks that are a fixed offset into the actual allocated block (which can be inverted for purposes of freeing).
+   6. Each collection touches ALL live memory, which is generally slow, and also interacts poorly with the virtual memory system (basically none of your active heap can be effectively paged to disk!).
+   7. Many other things I'm sure...
 
 ### How might a real conservative collector work?
 
