@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A3440121C30CFF600549958 /* gc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A3440101C30CFF600549958 /* gc.cpp */; };
 		5A34EC361C30CD4B00109394 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A34EC351C30CD4B00109394 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5A3440101C30CFF600549958 /* gc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gc.cpp; sourceTree = "<group>"; };
+		5A3440111C30CFF600549958 /* gc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gc.h; sourceTree = "<group>"; };
 		5A34EC321C30CD4B00109394 /* SimpleGC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SimpleGC; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A34EC351C30CD4B00109394 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +60,8 @@
 		5A34EC341C30CD4B00109394 /* SimpleGC */ = {
 			isa = PBXGroup;
 			children = (
+				5A3440101C30CFF600549958 /* gc.cpp */,
+				5A3440111C30CFF600549958 /* gc.h */,
 				5A34EC351C30CD4B00109394 /* main.cpp */,
 			);
 			path = SimpleGC;
@@ -119,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A34EC361C30CD4B00109394 /* main.cpp in Sources */,
+				5A3440121C30CFF600549958 /* gc.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +208,8 @@
 		5A34EC3A1C30CD4B00109394 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_DYNAMIC_NO_PIC = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -209,6 +217,8 @@
 		5A34EC3B1C30CD4B00109394 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_DYNAMIC_NO_PIC = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -232,6 +242,7 @@
 				5A34EC3B1C30CD4B00109394 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
